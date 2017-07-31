@@ -39,7 +39,7 @@ def highchartsTry(request):
         lists = []
         for music_info in topMusics:
             lists.append(music_info)
-        return render_to_response('highchart.html', {'lists': lists})
+        return render(request, 'highchart.html', {'lists': lists})
 
 
 
