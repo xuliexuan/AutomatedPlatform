@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'nokia_site',
+]
+
+STATICFILES_FINDERS = [
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+'django.contrib.staticfiles.finders.FileSystemFinder',
+'compressor.finders.CompressorFinder',
 ]
 
 MIDDLEWARE = [
