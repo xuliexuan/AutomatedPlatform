@@ -20,3 +20,4 @@ AutomatedPlatform uses the following:
 * Highcharts (http://www.highcharts.com/)
 * Django Compressor (http://django-compressor.readthedocs.org/en/latest/)
 * Twitter Bootstrap 3 (http://getbootstrap.com)
+* Font Awesome (http://fontawesome.dashgame.com/)
