@@ -24,3 +24,5 @@ AutomatedPlatform uses the following:
 * Highcharts (http://www.highcharts.com/)
 * Twitter Bootstrap 3 (http://getbootstrap.com)
 * Font Awesome (http://fontawesome.dashgame.com/)
+* Moment (http://momentjs.com)
+* validation (https://jqueryvalidation.org/)

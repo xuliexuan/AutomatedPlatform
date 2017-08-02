@@ -25,6 +25,8 @@ SECRET_KEY = 'v810@9*q1e8rr1^tp-%21x^)mr4+25zyx51k#if%+g*@dq1t0h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+COMPRESS_ENABLED=True
+
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'compressor',
     'nokia_site',
 ]
 
@@ -133,7 +136,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = '/tempfiles/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
