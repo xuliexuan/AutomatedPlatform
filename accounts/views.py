@@ -13,6 +13,7 @@ def login_view(request):
         username = request.POST['username'].replace(' ', '').lower()
         password = request.POST['password']
         user = authenticate(username=username, password=password)
+        print(user)
         if user is not None:
             if user.is_active:
                 login(request, user)
