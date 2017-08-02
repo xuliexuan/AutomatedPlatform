@@ -7,6 +7,8 @@ Main Site:
 Features:
 * Limited log in. Set the access authority only for Nokia internal employees(will update later).
 * Multi function. Different function teams could start their test by choose related navigation bar.
+* Reporting. Support two types of test report: .html and .pdf. And you can also save to local.
+* Friendly to users. There are some useful information at the user info page, if you don't know how to use this tool.
 
 ToDo
 ----
