@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="keywords" content="">
     <link rel="icon" sizes="512x512" href="{% static 'img/icons/nokia_4.jpg' %}">
+    <link href="" rel="stylesheet">
 
     <title>{% block title %} Automated Platform {% endblock %}</title>
     <meta name="description" content="The Automated Platform for Nokia!">
@@ -29,6 +31,8 @@
         </style>
     {% endblock %}
 
+
+</style>
     {% block extrahead %}{% endblock %}
 </head>
 <body>
@@ -49,6 +53,16 @@
                 <a class="navbar-brand" href="/highchartsTry/">
                     <span class="fa fa-cog fa-spin"></span> AutomatedPlatform</a>
                 {% endif %}
+            </div>
+
+            <!-- Search Bar-->
+            <div>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Go</button>
+                </form>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,6 +117,7 @@
                 </ul>
             </div>
         </div>
+
     </nav>
 
     {% block rootcontainer %}
@@ -118,6 +133,8 @@
         </div>
     </div><!-- /.container -->
     {% endblock %}
+
+
 
     <!-- FOOTER -->
     <footer class="footer navbar-fixed-bottom">
