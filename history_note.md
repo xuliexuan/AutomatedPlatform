@@ -5,7 +5,7 @@
     * study code in <head>, you can read base.html
 
 2017.08.01(**_liexuan_**)
-=========================
+-------------------------
 1. 加载font-awesome的图标的时候：
     * ` <span class="fa fa-hand-lizard-o"></span> `，必须是`fa fa-xxx`这样的格式
 2. HTML 相关的标签
@@ -28,3 +28,13 @@
     * `<class>` 定义元素的类的名称, 调用css
     * `<form>` 元素是块级元素，其前后会产生折行
     * `<hr>` 水平线标签
+
+2017.08.06(**_liexuan_**)
+-------------------------
+1. django-axes，用于跟踪登录失败情况。
+    * pip install django-axes
+2. configuration django-axes
+    * https://django-axes.readthedocs.io/en/latest/configuration.html
+3. issue
+    * ``` Error importing module: 'No module named 'axes.middleware''```
+        * https://stackoverflow.com/questions/38786393/django-axes-installed-but-axes-middleware-module-not-available

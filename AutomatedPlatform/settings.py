@@ -40,14 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'axes',
     'compressor',
     'nokia_site',
+
 ]
 
+# Django-axes settings
+AXES_LOGIN_FAILURE_LIMIT = 20
+
 STATICFILES_FINDERS = [
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'compressor.finders.CompressorFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'compressor.finders.CompressorFinder',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'AutomatedPlatform.urls'
 

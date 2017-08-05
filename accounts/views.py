@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth import logout, authenticate, login
 from django.shortcuts import HttpResponseRedirect
+import logging
+from axes.decorators import watch_login
 
+logger = logging.getLogger(__name__)
+
+print(logger)
+@watch_login
 def login_view(request):
     # Force logout.
     logout(request)
