@@ -38,3 +38,8 @@
 3. issue
     * ``` Error importing module: 'No module named 'axes.middleware''```
         * https://stackoverflow.com/questions/38786393/django-axes-installed-but-axes-middleware-module-not-available
+
+2017.08.06(**_liexuan_**)
+-------------------------
+1. 升级包
+    * `pip install --upgrade somepackage`

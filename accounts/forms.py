@@ -7,7 +7,7 @@ from crispy_forms.layout import Button, Submit, Fieldset, HTML, Field
 from crispy_forms.bootstrap import FormActions
 from timezone_field import TimeZoneFormField
 
-
+# from glucoses.models import Category, Unit
 
 from .validators import validate_email_unique, validate_username_unique
 
