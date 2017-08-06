@@ -53,11 +53,11 @@ class UserSettingsForm(forms.Form):
     email = forms.EmailField(label='Email')
     time_zone = TimeZoneFormField(label='Time Zone')
 
-    glucose_unit = forms.ModelChoiceField(
-        Unit.objects.all(), label='Glucose Unit', empty_label=None)
-    default_category = forms.ModelChoiceField(
-        Category.objects.all(), label='Default Category',
-        empty_label='Auto', required=False)
+    # glucose_unit = forms.ModelChoiceField(
+    #     Unit.objects.all(), label='Glucose Unit', empty_label=None)
+    # default_category = forms.ModelChoiceField(
+    #     Category.objects.all(), label='Default Category',
+    #     empty_label='Auto', required=False)
 
     glucose_low = forms.DecimalField(
         label='Low', max_digits=6, max_value=3000, min_value=0,
