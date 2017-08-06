@@ -43,3 +43,5 @@
 -------------------------
 1. 升级包
     * `pip install --upgrade somepackage`
+2. Add APPs
+    * Add 'crispy_forms' to installed APP to achieve signup page display.
