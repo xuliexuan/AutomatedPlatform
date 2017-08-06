@@ -14,11 +14,11 @@
     * `<a>` 定义超链接，href
     * `<img>` 图片
          ```
-         <img src=“” align=“” alt=“” border=“”>
-         Src 图片路径，一般使用相对路径
+         <img src="" align="" alt="" border="">
+         Src: 图片路径，一般使用相对路径
          Align = left/right/top/middle/bottom,图文混排时用于和图片的对齐
-         Alt 图片无法显示时显示的文字
-         Border 边框的厚度
+         Alt: 图片无法显示时显示的文字
+         Border: 边框的厚度
          ```
     * `<nav>` 导航链接
     * `<span>` 组合行内元素

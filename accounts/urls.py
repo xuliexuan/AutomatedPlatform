@@ -2,9 +2,11 @@
 # -*- coding:utf-8 -*-
 from django.conf.urls import url
 from .views import login_view
+from django.contrib.auth.views import password_reset, password_reset_done
 
 
 urlpatterns = [
     url(regex=r'^login/$', view=login_view, name='login'),
-
+    url(regex=r'^password/reset/$', view=password_reset, name='password_reset'),
+    url(regex=r'^password/reset/done/$', view=password_reset_done, name='password_reset_done'),
 ]
