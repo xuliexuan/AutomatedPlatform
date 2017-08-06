@@ -19,6 +19,6 @@ from nokia_site import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^highchartsTry/', views.highchartsTry),
+    url(r'^$', views.HomePageView.as_view(), name='home'),
     url(r'^accounts/', include('accounts.urls')),
 ]
