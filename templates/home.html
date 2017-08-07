@@ -1,2 +1,31 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+
+{% block extracss %}
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block customcss %}
+    <style>
+        body {margin-top: 40px;}
+    </style>
+{% endblock %}
+
+{% block rootcontainer %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+{#    <div class="jumbotron" style="background-color:#777; color:white">#}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                </div>
+                <div class="col-md-5">
+                    <a href="{% static 'img/background/nokia_1.jpg' %}" class="thumbnail">
+                        <img src="{% static 'img/background/nokia_1.jpg' %}">
+                    </a>
+                    <div class="addthis_sharing_toolbox text-center"></div>
+                </div>
+            </div>
+         </div>
+{#    </div>#}
+{% endblock %}
+
