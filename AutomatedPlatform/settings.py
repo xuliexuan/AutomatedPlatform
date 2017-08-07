@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'django.contrib.humanize',
     'crispy_forms',
     'axes',
@@ -149,3 +148,6 @@ STATIC_ROOT = '/tempfiles/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# App settings
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
