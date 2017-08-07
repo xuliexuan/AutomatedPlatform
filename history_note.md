@@ -45,3 +45,13 @@
     * `pip install --upgrade somepackage`
 2. Add APPs
     * Add 'crispy_forms' to installed APP to achieve signup page display.
+
+2017.08.07
+-------------------------
+1. issue
+    * ```$ git pull
+        error: You have not concluded your merge (MERGE_HEAD exists).
+        hint: Please, commit your changes before merging.
+        fatal: Exiting because of unfinished merge.
+        ```
+        * http://yijiebuyi.com/blog/5b55eb51ad49ce41e2de9c85dd4513ca.html
