@@ -59,8 +59,8 @@ class SignUpView(FormView):
             user.save()
 
             # Update the user's settings.
-            user.settings.time_zone = form.cleaned_data['time_zone']
-            user.settings.save()
+            # user.settings.time_zone = form.cleaned_data['time_zone']
+            # user.settings.save()
 
             logger.info('New user signed up: %s (%s)', user, user.email)
 
