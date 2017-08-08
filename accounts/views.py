@@ -3,10 +3,12 @@ from django.contrib.auth import logout, authenticate, login
 from django.shortcuts import HttpResponseRedirect
 import logging
 from axes.decorators import watch_login
-from .forms import SignUpForm
+from .forms import SignUpForm, UserSettingsForm
 from django.views.generic import FormView
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.contrib import messages
+from braces.views import LoginRequiredMixin
 
 logger = logging.getLogger(__name__)
 
@@ -72,3 +74,45 @@ class SignUpView(FormView):
         else:
             return self.form_invalid(form)
 
+class UserSettingsView(LoginRequiredMixin, FormView):
+    success_url = '.'
+    form_class = UserSettingsForm
+    template_name = 'accounts/usersettings.html'
+
+    def get_initial(self):
+        user = self.request.user
+        # settings = user.settings
+
+        return {
+            'username': user.username,
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email': user.email,
+            'time_zone': settings.TIME_ZONE,
+        }
+
+    def form_valid(self, form):
+        messages.add_message(self.request, messages.SUCCESS, 'Settings Saved!')
+
+        return super(UserSettingsView, self).form_valid(form)
+
+    def post(self, request, *args, **kwargs):
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        form.full_clean()
+
+        if form.is_valid():
+            user = request.user
+            user.first_name = form.cleaned_data['first_name']
+            user.last_name = form.cleaned_data['last_name']
+            user.email = form.cleaned_data['email']
+            user.save()
+
+            # If user's glucose unit setting is set to mmol/L, convert the
+            # values to mg/dL.
+
+            logger.info('Account Settings updated by %s', user)
+
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
