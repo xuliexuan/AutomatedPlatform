@@ -1,2 +1,12 @@
 *.pyc
 .idea
+db.sqlite3
+AutomatedPlatform/__pycache__/
+accounts/__pycache__/
+accounts/migrations/__pycache__/
+core/__pycache__/
+core/migrations/__pycache__/
+data_manage/__pycache__/
+data_manage/migrations/__pycache__/
+nokia_site/__pycache__/
+nokia_site/migrations/__pycache__/

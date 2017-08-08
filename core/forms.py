@@ -12,7 +12,7 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={'cols': 50, 'row': 6}))
 
     def __init__(self, *args, **kwargs):
-        super(ContactForm).__init__(*args, **kwargs)
+        super(ContactForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
         self.helper.form_method = 'post'
