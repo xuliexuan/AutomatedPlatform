@@ -19,7 +19,7 @@ ToDo
 3rd-Party Apps/Libraries/Plugins
 --------------
 Tool：
-* Baiducloude (http://pan.baidu.com/s/1eRSImUQ)
+* Baiducloud (http://pan.baidu.com/s/1eRSImUQ)
 
 AutomatedPlatform uses the following:
 * Django (https://www.djangoproject.com/)
