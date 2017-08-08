@@ -47,7 +47,7 @@
                 </button>
                 {% if user.is_authenticated %}
                 <a class="navbar-brand" href="{% url 'dashboard' %}">
-                    <span class="fa fa-superpowers"></span> AutomatedPlatform</a>
+                    <span class="fa fa-cog fa-spin"></span> AutomatedPlatform</a>
                 {% else %}
                 <a class="navbar-brand" href="/">
                     <span class="fa fa-cog fa-spin"></span> AutomatedPlatform</a>
@@ -56,7 +56,7 @@
 
             <!-- Search Bar-->
             <div>
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search">
                     </div>
@@ -94,9 +94,10 @@
                             {{ user }} <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'usersettings' %}">Account Settings</a></li>
+                            <li class="divider"></li>
                             <li><a href="{% url 'password_change' %}">Change Password</a></li>
                             <li class="divider"></li>
-{#                            <li><a href="{% url 'glucose_import' %}">Import Data from CSV</a></li>#}
+                            <li><a href="{% url 'data_import' %}">Import Data from CSV</a></li>
                             <li class="divider"></li>
                             <li><a href="{% url 'help' %}">Help</a></li>
                             <li class="divider"></li>

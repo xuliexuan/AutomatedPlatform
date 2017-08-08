@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -10,6 +10,15 @@ from braces.views import (
 )
 from .forms import ContactForm
 
+
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+
+    # def get_context_data(self, **kwargs):
+    #     context = super(HomePageView, self).get_context_data(**kwargs)
+    #     context['glucose_count'] = Glucose.objects.count()
+    #
+    #     return context
 
 class HelpPageView(LoginRequiredMixin, FormView):
     success_url = '.'

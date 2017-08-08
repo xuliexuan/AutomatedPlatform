@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from nokia_site import views
+from core.views import HomePageView
 from data_manage.views import dashboard
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.HomePageView.as_view(), name='home'),
-    url(r'^dashboard/$', view=dashboard, name='dashboard'),
+    url(regex=r'^admin/', view=admin.site.urls),
+    url(regex=r'^$', view=HomePageView.as_view(), name='home'),
+    url(regex=r'^dashboard/$', view=dashboard, name='dashboard'),
+
     url(r'^accounts/', include('accounts.urls')),
     url(r'^core/', include('core.urls')),
+    url(r'^data_manage/', include('data_manage.urls'))
 ]

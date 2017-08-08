@@ -29,6 +29,7 @@ COMPRESS_ENABLED=True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/accounts/login/'
 
 # Application definition
 
@@ -44,10 +45,10 @@ INSTALLED_APPS = [
     'crispy_forms',
     'axes',
     'compressor',
-    'nokia_site',
     'data_manage',
     'core',
     'accounts',
+    'taggit',
 
 ]
 
