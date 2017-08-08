@@ -55,3 +55,10 @@
         fatal: Exiting because of unfinished merge.
         ```
         * http://yijiebuyi.com/blog/5b55eb51ad49ce41e2de9c85dd4513ca.html
+
+2017.08.08
+-------------------------
+1. Clean database
+    * 工具: SQLiteStudio
+    * 操作：打开工具，连接到对应的数据库；打开后，在对应的表单上点击右键，选择“擦除该表的数据”，即可清除数据库对应表单中的内容。
+    * 注意：不能删除表单，否则会因为无法找到相应表单报错，需要重新导入数据库。
