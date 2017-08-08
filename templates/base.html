@@ -98,7 +98,7 @@
                             <li class="divider"></li>
 {#                            <li><a href="{% url 'glucose_import' %}">Import Data from CSV</a></li>#}
                             <li class="divider"></li>
-{#                            <li><a href="{% url 'help' %}">Help</a></li>#}
+                            <li><a href="{% url 'help' %}">Help</a></li>
                             <li class="divider"></li>
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
                         </ul>
@@ -110,6 +110,7 @@
                             Log In</button>
                         <button type="button" class="btn btn-success"
                             onclick="location.href=&quot;{% url 'signup' %}&quot;;">
+{#                            onclick="location.href=&quot;/accounts/signup/&quot;;">#}
                             Sign Up</button>
                         </form>
                     {% endif %}

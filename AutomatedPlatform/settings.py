@@ -40,10 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
     'crispy_forms',
     'axes',
     'compressor',
     'nokia_site',
+    'data_manage',
+    'core',
+    'accounts',
 
 ]
 

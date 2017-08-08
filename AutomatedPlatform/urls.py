@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^$', views.HomePageView.as_view(), name='home'),
     url(r'^dashboard/$', view=dashboard, name='dashboard'),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^core/', include('core.urls')),
 ]
