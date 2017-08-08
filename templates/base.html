@@ -68,9 +68,9 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'glucose_create' %}">
-                            <span class="fa fa-plus"></span>&nbsp;New Date</a>
-                        </li>
+{#                        <li><a href="{% url 'glucose_create' %}">#}
+{#                            <span class="fa fa-plus"></span>&nbsp;New Date</a>#}
+{#                        </li>#}
                         <li><a href="{% url 'dashboard' %}">
                             <span class="fa fa-th"></span>&nbsp;Dashboard</a>
                         </li>
@@ -80,10 +80,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="fa fa-bar-chart"></span>&nbsp;Reports <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'glucose_filter' %}">Filter Data</a></li>
-                            <li><a href="{% url 'glucose_charts' %}">Charts & Graphs</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{% url 'glucose_email_report' %}">Email Report</a></li>
+{#                            <li><a href="{% url 'glucose_filter' %}">Filter Data</a></li>#}
+{#                            <li><a href="{% url 'glucose_charts' %}">Charts & Graphs</a></li>#}
+{#                            <li class="divider"></li>#}
+{#                            <li><a href="{% url 'glucose_email_report' %}">Email Report</a></li>#}
                         </ul>
                         </li>
 
@@ -93,14 +93,14 @@
                             <span class="fa fa-user"></span>&nbsp;
                             {{ user }} <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'usersettings' %}">Account Settings</a></li>
-                            <li><a href="{% url 'password_change' %}">Change Password</a></li>
+{#                            <li><a href="{% url 'usersettings' %}">Account Settings</a></li>#}
+{#                            <li><a href="{% url 'password_change' %}">Change Password</a></li>#}
                             <li class="divider"></li>
-                            <li><a href="{% url 'glucose_import' %}">Import Data from CSV</a></li>
+{#                            <li><a href="{% url 'glucose_import' %}">Import Data from CSV</a></li>#}
                             <li class="divider"></li>
-                            <li><a href="{% url 'help' %}">Help</a></li>
+{#                            <li><a href="{% url 'help' %}">Help</a></li>#}
                             <li class="divider"></li>
-                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+{#                            <li><a href="{% url 'logout' %}">Log Out</a></li>#}
                         </ul>
                         </li>
                     {% else %}

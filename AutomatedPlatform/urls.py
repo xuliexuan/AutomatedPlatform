@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from nokia_site import views
+from data_manage.views import dashboard
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.HomePageView.as_view(), name='home'),
+    url(r'^dashboard/$', view=dashboard, name='dashboard'),
     url(r'^accounts/', include('accounts.urls')),
 ]
