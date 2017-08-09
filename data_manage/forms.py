@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 from django  import forms
 from crispy_forms.helper import FormHelper, Layout
-from crispy_forms.layout import Submit, HTML, MultiField, Div
+from crispy_forms.layout import Submit, HTML, MultiField, Div, Fieldset
 from .fields import RestrictedFileField
 from crispy_forms.bootstrap import FormActions
 
@@ -31,8 +31,9 @@ class DateImportForm(forms.Form):
         self.helper.form_method = 'post'
 
         self. helper.layout = Layout(
-            HTML
-                (
+            Fieldset(
+                HTML
+                    (
                     '''
                     {% if messages %}
                     {% for message in messages %}
@@ -42,13 +43,14 @@ class DateImportForm(forms.Form):
                     '''
                 ),
                 Div
-                (
+                    (
                     'file',
                     FormActions
-                    (
+                        (
                         Submit('submit', 'Import'),
                         css_class='pull-right',
                     ),
                     css_class='well col-xs-10 col-sm-8 col-md-8',
                 )
+            )
         )
