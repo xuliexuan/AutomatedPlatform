@@ -3,13 +3,13 @@
 from django  import forms
 from crispy_forms.helper import FormHelper, Layout
 from crispy_forms.layout import Submit, HTML, MultiField, Div
-from crispy_forms.bootstrap import FormActions
 from .fields import RestrictedFileField
+from crispy_forms.bootstrap import FormActions
 
 DATE_FORMAT = '%m/%d/%Y'
 TIME_FORMAT = '%I:%M %p'
 
-class GlucoseImportForm(forms.Form):
+class DateImportForm(forms.Form):
     # File size limited to 2MB
     file = RestrictedFileField(
         label='CSV File (Max Size 2MB)',
@@ -25,15 +25,14 @@ class GlucoseImportForm(forms.Form):
     )
 
     def __init__(self, *args, **kwargs):
-        super(GlucoseImportForm, self).__init__(*args, **kwargs)
+        super(DateImportForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
         self.helper.form_method = 'post'
 
         self. helper.layout = Layout(
-            MultiField(
-                None,
-                HTML(
+            HTML
+                (
                     '''
                     {% if messages %}
                     {% for message in messages %}
@@ -42,13 +41,14 @@ class GlucoseImportForm(forms.Form):
                     {% endif %}>{{ message }}</p>{% endfor %}{% endif %}
                     '''
                 ),
-                Div(
+                Div
+                (
                     'file',
-                    FormActions(
+                    FormActions
+                    (
                         Submit('submit', 'Import'),
                         css_class='pull-right',
                     ),
                     css_class='well col-xs-10 col-sm-8 col-md-8',
-                ),
-            ),
+                )
         )

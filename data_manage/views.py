@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.contrib import messages
 from .forms import (
-    GlucoseImportForm,
+    DateImportForm,
 )
 
 logger = logging.getLogger(__name__)
@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 @login_required
 def import_data(request):
     if request.method == 'POST':
-        form = GlucoseImportForm(request.POST, request.FILES)
+        form = DateImportForm(request.POST, request.FILES)
         if form.is_valid():
             try:
                 logger.info('Importing data from uploaded CSV file for user: %s',
@@ -32,8 +32,7 @@ def import_data(request):
                 return render(request, 'data_manage/data_import.html', {'form': form})
             return HttpResponseRedirect(reverse('dashboard'))
     else:
-        form = GlucoseImportForm()
-
+        form = DateImportForm()
     return render(request, 'data_manage/data_import.html', {'form': form})
 
 
